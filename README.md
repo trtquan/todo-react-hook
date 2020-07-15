@@ -11,4 +11,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### Custom Hook Design
 
-![custom-hook-design](./src/assets/custom-hook-design.png)
+![custom-hook-design](./src/assets/custom-hook-design-1.0.1.png)
