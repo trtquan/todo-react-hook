@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import TodoList from "./components/TodoList";
+import Filter from "./components/Filter";
+import AddTodo from "./components/AddTodo";
+import { useFilterBy, useTodos, useVisibilityTodos } from "./todo-hooks";
 function App() {
+  
+  const { filterBy, changeFilter } = useFilterBy();
+  const { todos, addTodo, toggleTodo, prepareRemove, removeTodo } = useTodos();
+  const { visibilityTodos } = useVisibilityTodos(todos, filterBy);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="action-bar">
+        <AddTodo onAddTodo={addTodo} />
+        <Filter onChangeFilter={changeFilter} />
+      </div>
+      <TodoList
+        todos={visibilityTodos}
+        onToggleTodo={toggleTodo}
+        onPrepareRemove={prepareRemove}
+        onRemoveTodo={removeTodo}
+      />
+    </>
   );
 }
 
