@@ -5,7 +5,7 @@ const getTodoList = () => {
 };
 export const useTodos = (initialTodos = getTodoList()) => {
   const [todos, setTodos] = useState(initialTodos);
-  useEffect(() => {
+  useEffect(() => { 
     localStorage.setItem("todo-list", JSON.stringify(todos));
   }, [todos]);
 
