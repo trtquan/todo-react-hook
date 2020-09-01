@@ -9,6 +9,6 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Custom Hook Design
+### Custom Hook Design 1.0.1
 
 ![custom-hook-design](./src/assets/custom-hook-design-1.0.1.png)
