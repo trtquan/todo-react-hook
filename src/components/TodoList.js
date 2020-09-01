@@ -6,7 +6,7 @@ const TodoList = ({todos, onToggleTodo, onPrepareRemove, onRemoveTodo}) =>{
   <div className="todo-container">
     <ul className="todo-list">
       {todos.map(todo => (
-        <Todo
+        <Todo 
           key={`todo ${todo.id}`}
           {...todo}
           onToggleTodo={() => onToggleTodo(todo.id)}
