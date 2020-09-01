@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { VisibilityFilters } from "../const";
 const Filter = ({ onChangeFilter }) => (
-  <select
+  <select 
     name="todos"
     className="filter-todo"
     onChange={(e) => onChangeFilter(e.target.value)}
