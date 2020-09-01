@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Todo = ({completed, removed, text ,onToggleTodo, onPrepareRemove, onRemoveTodo }) => (
     <div onAnimationEnd={onRemoveTodo}
     className={`todo ${completed ? "completed" : "uncompleted"}
-               ${removed ? "fall" : "" }`}>
+               ${removed ? "fall" : "" }`}> 
      <li className="todo-item">{text}</li>
 
      <button className="check-btn" onClick={onToggleTodo}>
