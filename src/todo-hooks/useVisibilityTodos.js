@@ -4,7 +4,7 @@ import { useState, useEffect} from "react";
 export const useVisibilityTodos = (todos= [], filterBy = VisibilityFilters.SHOW_ALL ) => {
   const [visibilityTodos, setVisibilityTodos] = useState(todos)
   useEffect(() => {
-    switch (filterBy) {
+    switch (filterBy) { 
       case VisibilityFilters.SHOW_ALL:
         setVisibilityTodos(todos);
         break
