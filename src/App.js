@@ -10,7 +10,7 @@ function App() {
   const { todos, addTodo, toggleTodo, prepareRemove, removeTodo } = useTodos();
   const { visibilityTodos } = useVisibilityTodos(todos, filterBy);
 
-  return (
+  return ( 
     <>
       <div className="action-bar">
         <AddTodo onAddTodo={addTodo} />
